@@ -1,4 +1,4 @@
-"use strict"
+
 
 const mainListEl = document.querySelector("#categories");
 console.log(`Categories:`, mainListEl.children.length);
