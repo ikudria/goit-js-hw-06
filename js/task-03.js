@@ -14,13 +14,32 @@ const images = [
 ];
 
 
-/*
-<li class="gallery-item">
-  <a href="#">
-    <img src="image.url" alt="image.alt">
-  </a>
-</li>
-*/
+const galleryEL = document.querySelector(".gallery");
 
-const galleryListEl = document.querySelector('.gallery');
-console.log(galleryListEl);
+const makeGalleryCard = ({ url, alt } = {}) => {
+  return `<li class="gallery-item">
+            <a href="#">
+              <img src=${url} alt=${alt} width = 50%>
+            </a>
+          </li>`;
+};
+
+// console.log(makeGalleryCard(images[0]));
+
+
+const galleryMarkup = images.map(image => {
+  return makeGalleryCard(image)
+}).join("");
+
+console.log(galleryMarkup);
+
+
+galleryEL.insertAdjacentHTML("beforeend", galleryMarkup);
+
+
+
+
+
+
+
+
