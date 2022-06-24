@@ -12,3 +12,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+/*
+<li class="gallery-item">
+  <a href="#">
+    <img src="image.url" alt="image.alt">
+  </a>
+</li>
+*/
+
+const galleryListEl = document.querySelector('.gallery');
+console.log(galleryListEl);
