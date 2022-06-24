@@ -1,15 +1,14 @@
 "use strict"
 
-const mainItemEl = document.querySelectorAll('.item');
-// console.log(mainItemEl);
-console.log(`Categories:`, mainItemEl.length);
+const mainListEl = document.querySelector("#categories");
+console.log(`Categories:`, mainListEl.children.length);
 
-console.log(`Category:`, mainItemEl[0].querySelector('h2').textContent);
-console.log(`Elements:`, mainItemEl[0].querySelector('ul').children.length);
+const mainItemsEl = document.querySelectorAll('.item');
 
-console.log(`Category:`, mainItemEl[1].querySelector('h2').textContent);
-console.log(`Elements:`, mainItemEl[1].querySelector('ul').children.length);
-
-console.log(`Category:`, mainItemEl[2].querySelector('h2').textContent);
-console.log(`Elements:`, mainItemEl[2].querySelector('ul').children.length);
-
+mainItemsEl.forEach(function (mainItemEl) {
+    const headerEl = mainItemEl.querySelector('h2');
+    console.log(`Category:`, headerEl.textContent);
+  
+    const subListEl = mainItemEl.querySelector('ul');
+    console.log(`Elements:`, subListEl.children.length);
+});
