@@ -6,12 +6,11 @@ const textRef = document.querySelector('#text')
 inputRef.addEventListener('input', onInputValueChange);  
 
 
-function onInputValueChange(event) {
-    // console.log(event.currentTarget.value);
-        textRef.style.fontSize =  event.currentTarget.value + 'px';
+function onInputValueChange() {
+    
+        textRef.style.fontSize =  inputRef.value + 'px';
     }
   
-
 
  
 
