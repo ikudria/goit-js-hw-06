@@ -7,8 +7,7 @@ input.addEventListener('blur', onInputBlur);
 function onInputBlur(event) {
     
     const inputLength = event.currentTarget.value.length;
-    // inputLength <= maxLength ? input.classList.add('valid') : input.classList.add('invalid');
-
+   
     if (inputLength <= maxLength) {
         input.classList.add('valid');
         input.classList.remove('invalid');
@@ -16,6 +15,8 @@ function onInputBlur(event) {
         input.classList.add('invalid');
         input.classList.remove('valid');
     }
+
+ // inputLength <= maxLength ? input.classList.add('valid') : input.classList.add('invalid');
 
 }
 
