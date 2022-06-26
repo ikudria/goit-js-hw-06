@@ -7,15 +7,23 @@ input.addEventListener('blur', onInputBlur);
 function onInputBlur(event) {
     
     const inputLength = event.currentTarget.value.length;
-    inputLength <= maxLength ? input.classList.add('valid') : input.classList.add('invalid');
+    // inputLength <= maxLength ? input.classList.add('valid') : input.classList.add('invalid');
+
+    if (inputLength <= maxLength) {
+        input.classList.add('valid');
+        input.classList.remove('invalid');
+    } else {
+        input.classList.add('invalid');
+        input.classList.remove('valid');
+    }
 
 }
 
-function onInputFocus(event) {
-    event.currentTarget.value = '';
-    input.classList.remove('invalid');
-    input.classList.remove('valid');
+// function onInputFocus(event) {
+//     event.currentTarget.value = '';
+//     input.classList.remove('invalid');
+//     input.classList.remove('valid');
     
-}
+// }
 
-input.addEventListener('focus', onInputFocus);
+// input.addEventListener('focus', onInputFocus);
